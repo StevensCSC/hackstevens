@@ -1,0 +1,80 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    position: absolute;
+    background: maroon;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper > div {
+    position: absolute;
+    display: block;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+}
+
+#S:hover {
+    color: gray;
+    cursor: default;
+}
+
+.header > h1, .header > h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+}
+
+.header > h1 {
+    font-weight: 900;
+    font-size: 60px;
+}
+
+.header > h2 {
+    font-weight: 400;
+}
+
+
+#interestForm {
+    margin-top: 30px;
+}
+
+input[type="email"], button {
+    border: 3px solid gray;
+    padding: 10px;
+    border-radius: 8px;
+    background: maroon;
+    color: white;
+    margin: 0px 10px;
+    font-size: 20px;
+    min-width: 250px;
+    font-family: 'Jura', sans-serif;
+    font-weight: 500;
+}
+
+button {
+    min-width: 0;
+}
+
+input[type="email"]:focus {
+    border-color: lightgray;
+    outline: 0;
+}
+
+button:hover {
+    background: gray;
+    border-color: lightgray;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:active {
+    outline: 0;
+    background: lightgray;
+}

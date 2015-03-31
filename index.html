@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>HackStevens</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link href='http://fonts.googleapis.com/css?family=Jura:400,600,300,500|Orbitron:400,900,500,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <h1>Hack<span id="S" onclick="alert('you found it')">S</span>tevens</h1>
+                <h2>Place slogan here yo</h2>
+                <h2>Interested in keeping up?</h2>
+                <form id="interestForm" onsubmit="alert(this.subscribeEmail.value);return false">
+                    <input id="subscribeEmail" type="email" placeholder="youremail@example.com" />
+                    <button id="subscribeBtn">submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
