@@ -3,19 +3,39 @@
     <head>
         <title>HackStevens</title>
         <link rel="stylesheet" type="text/css" href="index.css">
-        <link href='http://fonts.googleapis.com/css?family=Jura:400,600,300,500|Orbitron:400,900,500,700' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Jura:400,600,300,500|Orbitron:400,900,500,700" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
     </head>
     <body>
         <div class="wrapper">
             <div class="header">
-                <h1>Hack<span id="S" onclick="alert('you found it')">S</span>tevens</h1>
+                <h1 class="noselect">Hack<span id="S" onclick="egg(this)">S</span>tevens</h1>
                 <h2>Place slogan here yo</h2>
                 <h2>Interested in keeping up?</h2>
-                <form id="interestForm" onsubmit="alert(this.subscribeEmail.value);return false">
-                    <input id="subscribeEmail" type="email" placeholder="youremail@example.com" />
+                <form action="//github.us10.list-manage.com/subscribe/post?u=be872c7555331f6242c2a7e59&amp;id=cc21bc428d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="interestForm" target="_blank" novalidate>
+                <!--form onsubmit="return listSubscribe(this)"-->
+                    <input id="mce-EMAIL" type="email" name="EMAIL" placeholder="youremail@example.com" />
                     <button id="subscribeBtn">submit</button>
                 </form>
             </div>
         </div>
     </body>
+    <script>
+    var egg = (function () {
+        var count = 0,
+            spacing = 0;
+
+        return function (node) {
+            node = node.parentNode;
+            count += 1;
+            if (count > 7) {
+                $(node).animate({'letter-spacing': ((spacing === 0) ? '100px' : '0px')});
+                spacing = (spacing === 0) ? 1 : 0;
+                console.log(spacing);
+                count = 0;
+            }
+            console.log(count);
+        };
+    }());
+    </script>
 </html>

@@ -4,11 +4,42 @@ body {
     padding: 0;
 }
 
+/* Animation frames */
+
+@-webkit-keyframes bgImageSlide {
+    0%   {background-position: center bottom;}
+    100% {background-position: center;}
+}
+
+@-webkit-keyframes contentSlide {
+    0%   {top: 15%;}
+    100% {top: 25%;}
+}
+
+@keyframes bgImageSlide {
+    0%   {background-position: center bottom;}
+    100% {background-position: center;}
+}
+
+@keyframes contentSlide {
+    0%   {top: 0%;}
+    50%  {top: 12%}
+    100% {top: 25%;}
+}
+
 .wrapper {
     position: absolute;
     background: maroon;
+    background: url('stevens_nyc2.jpg');
+    background-position: center;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
+
+    -webkit-animation-name: bgImageSlide;
+    -webkit-animation-duration: 3s;
+    animation-name: bgImageSlide;
+    animation-duration: 3s;
 }
 
 .wrapper > div {
@@ -17,38 +48,40 @@ body {
     top: 25%;
     width: 100%;
     text-align: center;
-}
 
-#S:hover {
-    color: gray;
-    cursor: default;
+    -webkit-animation-name: contentSlide;
+    -webkit-animation-duration: 3s;
+    animation-name: contentSlide;
+    animation-duration: 3s;
 }
 
 .header > h1, .header > h2 {
     font-family: 'Orbitron', sans-serif;
-    color: white;
+    color: maroon;
+    text-shadow: -2px 0 gray, 0 2px gray, 2px 0 gray, 0 -2px gray;
 }
 
 .header > h1 {
     font-weight: 900;
     font-size: 60px;
+    cursor: default;
 }
 
 .header > h2 {
-    font-weight: 400;
+    font-weight: bold;
 }
 
 
-#interestForm {
+.interestForm {
     margin-top: 30px;
 }
 
 input[type="email"], button {
-    border: 3px solid gray;
+    border: 3px solid maroon;
     padding: 10px;
     border-radius: 8px;
-    background: maroon;
-    color: white;
+    background: white;
+    color: maroon;
     margin: 0px 10px;
     font-size: 20px;
     min-width: 250px;
@@ -65,8 +98,11 @@ input[type="email"]:focus {
     outline: 0;
 }
 
+/*input[type="email"]::-webkit-input-placeholder {
+    color: pink;
+}*/
+
 button:hover {
-    background: gray;
     border-color: lightgray;
 }
 
@@ -77,4 +113,13 @@ button:focus {
 button:active {
     outline: 0;
     background: lightgray;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
