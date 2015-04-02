@@ -48,11 +48,12 @@ body {
     top: 25%;
     width: 100%;
     text-align: center;
-
+/*
     -webkit-animation-name: contentSlide;
     -webkit-animation-duration: 3s;
     animation-name: contentSlide;
     animation-duration: 3s;
+*/
 }
 
 .header > h1, .header > h2 {
